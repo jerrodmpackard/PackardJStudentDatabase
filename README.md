@@ -1,6 +1,4 @@
 Jerrod Packard
 January 12, 2024
 Student Database
-Created a student database with endpoints to get the database, create new students, and remove students from the database.
-Peer reviewed by: 
-Peer review comments: 
+Created a SQLite database containing students with endpoints to create, read, and delete students from the database.
