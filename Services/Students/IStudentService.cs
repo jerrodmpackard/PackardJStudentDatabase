@@ -8,5 +8,5 @@ public interface IStudentService
 
     List<Student> AddStudent(string firstName, string lastName, string hobby);
 
-    List<Student> DeleteStudent(string firstName, string lastName, string hobby);
+    List<Student> DeleteStudent(string firstName);
 }

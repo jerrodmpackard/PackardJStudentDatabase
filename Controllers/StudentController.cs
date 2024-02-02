@@ -30,9 +30,9 @@ public class StudentController : Controller
     }
 
     [HttpDelete]
-    [Route("DeleteStudent/{firstName}/{lastName}/{hobby}")]
-    public List<Student> DeleteStudent(string firstName, string lastName, string hobby)
+    [Route("DeleteStudent/{firstName}")]
+    public List<Student> DeleteStudent(string firstName)
     {
-        return _studentService.DeleteStudent(firstName, lastName, hobby);
+        return _studentService.DeleteStudent(firstName);
     }
 }

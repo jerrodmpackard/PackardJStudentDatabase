@@ -25,7 +25,7 @@ public class StudentService : IStudentService
         return _db.Students.ToList();
     }
 
-    public List<Student> DeleteStudent(string firstName, string lastName, string hobby)
+    public List<Student> DeleteStudent(string firstName)
     {
         var student = _db.Students.FirstOrDefault(foundStudent => foundStudent.FirstName == firstName);
 
