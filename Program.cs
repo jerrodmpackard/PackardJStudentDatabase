@@ -13,6 +13,16 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddCors(option => {
+	option.AddPolicy("CORSPolicy",
+	builder => {
+		builder.AllowAnyHeader()
+		.AllowAnyMethod()
+		.AllowAnyOrigin();
+	}
+	);
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IStudentService, StudentService>();
@@ -29,6 +39,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("CORSPolicy");
 
 app.MapControllers();
 
